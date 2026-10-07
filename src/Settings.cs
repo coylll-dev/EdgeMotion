@@ -62,5 +62,15 @@ namespace EdgeMotion
                 default: return DesktopAction.None;
             }
         }
+        public void SetAction(Gesture gesture, DesktopAction action)
+        {
+            switch (gesture)
+            {
+                case Gesture.Home: Home=action; break; case Gesture.Recent: Recent=action; break;
+                case Gesture.Back: Back=action; break; case Gesture.Voice: Voice=action; break;
+                case Gesture.QuickSettings: QuickSettings=action; break;
+                case Gesture.PreviousApp: PreviousApp=action; break; case Gesture.NextApp: NextApp=action; break;
+            }
+        }
     }
 }

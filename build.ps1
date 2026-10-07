@@ -1,4 +1,4 @@
-param([switch]$Test)
+﻿param([switch]$Test)
 $ErrorActionPreference = 'Stop'
 $compilerPath = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 if (!(Test-Path -LiteralPath $compilerPath)) { throw 'Нужен .NET Framework 4.8 или используйте dotnet build EdgeMotion.csproj.' }

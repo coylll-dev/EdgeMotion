@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Build and test
-        shell: pwsh
+        shell: powershell
         run: ./build.ps1 -Test
       - name: Package portable app
         shell: pwsh

@@ -5,7 +5,15 @@
 
 ## Запуск
 
-1. В PowerShell из папки проекта выполните `./build.ps1 -Test`.
+1. Откройте PowerShell и выполните:
+
+   ```powershell
+   cd "C:\Users\User\Documents\ChatGPT\Управление жестами"
+   powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build.ps1 -Test
+   ```
+
+   Путь с пробелами должен быть в кавычках. Параметр `-ExecutionPolicy Bypass`
+   действует только для запущенного процесса и не меняет постоянную политику системы.
 2. Откройте `artifacts/EdgeMotion.exe`.
 3. Приложение впервые запускается в **режиме проверки**. Зажмите правую кнопку мыши
    в пределах 12 пикселей от края экрана, проведите и отпустите. Результат появится
@@ -17,6 +25,9 @@ Windows 10/11 с .NET Framework 4.8. Для локальной сборки до
 компилятора .NET Framework; устанавливать Visual Studio не требуется.
 Альтернатива для разработки: `dotnet build EdgeMotion.csproj -c Release`
 с .NET SDK и доступными reference assemblies .NET Framework 4.8.
+
+`build.ps1` хранится в UTF-8 с BOM для совместимости с Windows PowerShell 5.1
+и PowerShell 7. При редактировании скрипта сохраняйте эту кодировку.
 
 ## Жесты по умолчанию
 

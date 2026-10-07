@@ -10,13 +10,17 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Build and test
-        shell: powershell
-        run: ./build.ps1 -Test
-      - name: Package portable app
-        shell: pwsh
-        run: Compress-Archive -Path artifacts/EdgeMotion.exe,artifacts/EdgeMotion.exe.config -DestinationPath artifacts/EdgeMotion-windows.zip
+      - uses: microsoft/setup-msbuild@v3
+      - name: Build solution
+        shell: cmd
+        run: msbuild EdgeMotion.sln /m /p:Configuration=Release /p:Platform="Any CPU"
+      - name: Run gesture tests
+        shell: cmd
+        run: tests\bin\Release\EdgeMotion.Tests.exe
       - uses: actions/upload-artifact@v6
         with:
           name: EdgeMotion-windows
-          path: artifacts/EdgeMotion-windows.zip
+          path: |
+            bin/Release/EdgeMotion.exe
+            bin/Release/EdgeMotion.exe.config
+          if-no-files-found: error

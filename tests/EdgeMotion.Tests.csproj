@@ -4,16 +4,13 @@
   <PropertyGroup>
     <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
     <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
-    <ProjectGuid>{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>EdgeMotion</RootNamespace>
+    <ProjectGuid>{D3EA9A6A-2908-477B-8A4D-80904C050D19}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EdgeMotion.Tests</RootNamespace>
+    <AssemblyName>EdgeMotion.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <LangVersion>5</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AppConfig>EdgeMotion.exe.config</AppConfig>
-    <AssemblyName>EdgeMotion</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -32,11 +29,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Compile Include="src\*.cs" />
-    <None Include="EdgeMotion.exe.config" />
-    <None Include="app.manifest" />
+    <Compile Include="GestureTests.cs" />
+    <ProjectReference Include="..\EdgeMotion.csproj">
+      <Project>{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}</Project>
+      <Name>EdgeMotion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeMotion", "EdgeMotion.csproj", "{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeMotion.Tests", "tests\EdgeMotion.Tests.csproj", "{D3EA9A6A-2908-477B-8A4D-80904C050D19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+		{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+		{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{D4D09F85-FB74-4AE8-B0E2-9B62C1EFA891}.Release|Any CPU.Build.0 = Release|AnyCPU
+		{D3EA9A6A-2908-477B-8A4D-80904C050D19}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+		{D3EA9A6A-2908-477B-8A4D-80904C050D19}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+		{D3EA9A6A-2908-477B-8A4D-80904C050D19}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{D3EA9A6A-2908-477B-8A4D-80904C050D19}.Release|Any CPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

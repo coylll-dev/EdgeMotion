@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>5</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AppConfig>EdgeMotion.exe.config</AppConfig>
+    <AssemblyName>EdgeMotion</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="src\*.cs" /></ItemGroup>
+</Project>
